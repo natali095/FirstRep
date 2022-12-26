@@ -1,3 +1,7 @@
+var global = "global";
+
+
+
 function display(){
 alert('hi');
 
@@ -68,9 +72,64 @@ else{
     //this block is execute when the condition is false
     console.log("x is equal to y");
 }
+
+//there are two more ways to create a variable introduced in ES6
+
+//let and const
+
+let z = 10;
+
 } 
 
 
 function display1(){
+ 
     alert("called from display");
+
+    var x = 10;
+    return x;
 }
+
+function variable_scope(){
+
+    //two types of scope:
+    //1. block scope
+    //2. function scope
+
+    //1. block scope means the variable is accesible only within the block
+    //we define a block by curly braces
+
+   /* var greeter = "Hey";
+    var x = 10;
+
+    if(x == 10){
+        var greeter = "say hello instead";
+    }
+ console.log(greeter);*/
+
+// var variable can be redeclarated in the current scope
+
+  var x = 10;
+  var x = 20;
+
+  let greeter = "Hey";
+  var x = 10;
+
+  //let variable can't be redeclarated in the current scope
+    let y = 10;
+    let y = 20;
+
+
+  if(x == 10){
+   let greeter = "say hello instead";
+  }
+
+
+  console.log(greeter); 
+
+  const z = 20;
+  const pi = 3.14;
+  // z = 30; - will give error as it is a constant value
+
+}
+ variable_scope();
